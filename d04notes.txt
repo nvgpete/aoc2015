@@ -1,0 +1,22 @@
+Finding adventcoins by calculating MD5 hashes
+
+There is no d04a.txt data file since the input, "yzbqklnj" was short enough
+to just embed in the program.
+
+I have written all of the code for these puzzles in c because that is where I
+am most comfortable. However, even I will admit c was not the best choice
+for this problem. Since I am not going to write a MD5 hasher myself, I need
+to find what c provides. The crypto library does provide MD5(), but it is
+not particularly convenient to use. It requires unsigned *char while most
+other string functions require *char so there will need to be some casting
+done to avaoid compiler complaints. It also returns a 16 byte binary array
+rather than 32 bytes of hex which would be more useful for this problem.
+(Thus the odd condition in my while() statement.) You will also need to
+compile with something like
+gcc -O2 -l crypto -o d04a d04a.c 
+
+Just to prove I could do it, there is also a php version which will run as
+./d04a.php if php is installed. The php version is shorter and quite a bit
+more readable. The php version is only about 10% slower since most of the
+time is spent in the MD5 code which will be the same regardless of the
+language.

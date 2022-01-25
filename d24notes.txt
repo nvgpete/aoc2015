@@ -1,0 +1,17 @@
+Balancing Santa's sleigh and quantum disentangling it
+
+I simplified this by looking at my data. In part a with 3 compartments, it
+would require at least 5 presents to make up 1/3 the weight. However, since
+all the presents had odd weights, and 1/3 the weight was even, I needed at
+least 6. So I looked for all the ways to pick 6 presents from 28, checked
+for correct weight, and calculated QE for all configurations with the
+correct weight.
+
+Part b was similar, except that 4 presents would have been enough. Similarly
+to part a (in a converse sort of way), 1/4 the total was odd so I actually
+needed 5 presents.
+
+I didn't worry about the other 2 or 3 compartments, since I was confident
+that with more presents in each there would be plenty of ways to balance the
+weights.
+  

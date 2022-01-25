@@ -1,0 +1,20 @@
+Dinner table seating to maximize happiness.
+
+This is mostly the same problem as day 9, part b, with the following two
+differences.
+
+1. Instead of a single metric between nodes, there are two which need to be
+added to get a final value. That is easily done in the input stage.
+
+2. We need to end where we started. That is just one extra addition from the
+last back to the first in the innermost loop.
+
+I just copiied the day 9 code and made the necessary changes. 
+
+Note that in both the problems, the inputs are arranged just as one would
+like for reading into an array. Thus, it is unnecessary to parse any of the
+names, just pick out the numbers from each line.
+
+The second part just requires that the smallest one of the pairwise values be
+discarded. I note that total happpiness decreased when I did this.
+Corollary: everyone would be happier if I ate in the kitchen.

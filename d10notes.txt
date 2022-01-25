@@ -1,0 +1,21 @@
+Elves counting game
+
+There is no d10a.txt; my data was 3113322113.
+
+I thought I had seen this sort of problem before. Part A gives a procedure
+to create larger and larger datasets, (in this case a string), and asks for
+the result after some number of iterations. It's an easy program to write and
+I get the right answer. Part B ups the number of iterations beyond what I
+can reasonably do so I have to look for a way to avoid creating large
+structures.  Sure enough, I got a seg fault when running with the larger
+number of iterations, even as I increased the storage. 
+
+Unfortunately, I never could come up with something to simplify the
+counting; not sure if it exists, though the problem may be well-known enough
+to find something on the internet. But that would be cheating.
+
+At that point, I realized the problem was that by declaring my variables under
+main() that I was running into stack overflow problems with large arrays.
+The arrays weren't really that large compared with my 4GB ram (even on this
+weak little netbook) so I moved them outside of main() into global memory,
+and then it worked fine.

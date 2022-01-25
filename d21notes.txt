@@ -1,0 +1,16 @@
+Kill the Boss, Litle Henry (#1)
+
+Another problem that I solved without a program. The program took longer
+to write than working out the answer with pencil and paper.
+
+If either player gets more hit points per turn, they will win.
+
+If they get the same number of hit points, the array ww contains 0 if the
+boss wins, 1 otherwise.  For my data, the boss wins for 1-6 hits per turn,
+and I win for 7-9;
+
+I then loop through all the possible things I can legally buy and see who
+wins. The only obscure part is the rings, where you can buy 0, 1 or 2. The
+double index on r1 and r2 find all the cases since the array has 2 zeros in
+it.
+ 

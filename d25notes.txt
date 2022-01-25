@@ -1,0 +1,6 @@
+Activation codes from a multiplicative congruential random number generator
+
+The hardest part was figuring out how far down the sequence a row, column
+pair was. I used a couple of for loops and adjusted the starts to get the
+first results correct. The printf's from those first couple of rows are still
+in the program.

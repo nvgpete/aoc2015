@@ -1,0 +1,9 @@
+Elves deliveering lots of presents
+
+There is no data file; my data was 3310000.
+
+SImilar to the sieve of Eratosthenes is the simplest; only 10 or 11 lines of
+code and runs in 0.15 seconds.
+
+I had some feeling for how large to make the array of houses; if it had been
+too small, I would not have gotten a solution and I would have made it bigger.

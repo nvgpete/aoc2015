@@ -1,0 +1,23 @@
+Wiring 16 bit wide logic gates - if only I'd had some of these back when I
+was building things from counters and nand gates.
+
+It's often helpful to look more closely at the input data before trying to
+do anything else. In this case
+
+sort -k2 -t ">" d07a.txt | more
+
+is quite useful. It shows us that in the ordering of destinations like a-z,
+aa-az, ba-bz etc that no destination is used before its sources are defined,
+with the exception of wire a. I wrote the instructions generally as one of 
+
+SRC1 OP SRC2 -> DST  // SRC1=wire or number; SRC2=wire except for SHIFT
+OP SRC1 -> DST  // OP must be NOT
+SRC1 -> DST     // SRC1 = number or wire
+
+A few greps showed me whta could and could not occur to get the above rules. 
+
+The first part of the program parses the input into arrays of ops, src1, and
+src2 and indexed by the destination (a-z=0-25; aa-az=26-51 etc).
+ 
+The second part steps through and executes the parsed arrays. It goes
+through a second time twice to generate the answer for part b.

@@ -1,0 +1,4 @@
+An aunt (or 500) named Sue
+
+Easy puzzle; get the second part with something like
+gcc -D PARTB -O2 -o d16a d16a.c

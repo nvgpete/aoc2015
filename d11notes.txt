@@ -1,0 +1,18 @@
+Updating rather insecure passwords
+
+There is no d11a.txt; my old password was "vzbxkghb".
+
+I did this one by hand, after noting
+
+1. I'd like to leave the first 3 letters alone to whatever extent is
+possible.
+
+2. I can fulfill rules 1 and 3 in 5 letters of the form sstuu.
+
+Noting the x in position 4 the next password must be "vzbxxyzz".
+
+For the next password, it's necessary to increment the 'b' in position 3 to
+be a 'c'. The next valid password will be "vzcaabcc".
+
+Since this is the Advent of Code, not the Advent of Logical Thinking, I did
+write a simple program to solve this also.

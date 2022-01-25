@@ -1,0 +1,10 @@
+Killing the boss with magic spells
+
+To get part b, compile something like
+gcc -D PARTB -O2 -o d22b d22a.c
+
+Typical game programming with a mv() routine to move the player and a mvb()
+routine to move the boss, calling each other recursively. The game state is
+kept in a struct which is passed by value so we don't need to save anything
+across function calls.
+

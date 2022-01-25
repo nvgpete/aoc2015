@@ -1,0 +1,12 @@
+A computer designed for the Collatz Conjecture
+see https://wikipedia.org/en/Collatz_conjecture
+
+The problem itself is straightforward; parse the input into an intermediate
+form and the execute it on a virtual machine. The hardest part is reading
+the problem so that one doesn't think jio must be jump if odd just as jie is
+jump if even.
+
+I think I first ran across this 40+ years ago as one of the problems in one
+of Knuth's books. He stated that the solution would be worth at least a PhD.
+I see it still has not been proved, though (perhaps) some progress is being
+made.

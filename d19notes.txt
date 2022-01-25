@@ -1,0 +1,43 @@
+Making medicine with elemental combinations that hurt my head.
+(I majored in chemistry a long time ago)
+
+A non-obvious problem that is easier than it could have been.
+
+I converted the two letter element names to integers from 1-16 to
+simplify. The rules then were two arrays, an integer for the
+starting element and a string for the result. 
+
+For part a I created two tables. The first gave the total number of ways
+each starting element could turn into something else. The second was a 2D
+table of which pairwise elements could produce duplicate results. Then I
+just went through the starting string adding numbers from the first table
+and subtracting off the duplicates.
+
+I was looking at the data while coding the second part and noticed the
+following. (For my data, likely similar for other datasets.)
+
+1. Lots of rules created 2 elements from 1 element, adding 1 element per
+step.
+
+2. Several rules created chains of the form *Rn...Ar. 
+
+3. Some rules in 2. above, created elements that were not in the final
+product and had no rules to remove them. I tossed these out.
+
+4. That left only results of the form *Rn*Ar or *Rn*Y*Ar where * represents
+a single element. Note the first adds 3 elements, the second 5.
+
+5. There are no rules to remove Rn, Y or Ar.
+
+6. The original string was 292 elements. There were 36 Rn and 6 Y in it.
+
+7. The first e->** rule creates 2 elements.
+
+8. If the transformation can be done at all, it must take 292-1-36*2-6*2
+= 207 steps. And it must be doable or it wouldn't make sense to ask for the
+answer.
+
+I have left d19b.c even though it doesn't solve the problem as the output
+from it led me to the conclusions above. I have also left in all of my
+debugging statements which I normally remove at the end since thedebugging
+staements showed me the information I needed to avoid finishing the program. 

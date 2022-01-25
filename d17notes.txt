@@ -1,0 +1,10 @@
+Splitting eggnog into smaller containers
+
+I used brute force here. There were 20 containers so I just counted from 0
+to 2^20-1 = 1048575, considered set bits to be filled containers and checked
+whether it added to 150. I also kept track of the number of set bits for
+part 2. The only optimization was to re-order the containers from large to
+small and exit the inner loop if the total was over 150. I thought about
+other optimizations, but since it ran in 0.040 seconds that would have been
+overkill.
+  
